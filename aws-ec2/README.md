@@ -1,0 +1,68 @@
+# AWS EC2 MCP Server
+
+The AWS EC2 MCP server offers a suite of tools for interacting with Amazon Elastic Compute Cloud instances and images.
+
+## Setup
+
+1. Create and activate a Python virtual environment.
+2. Install dependencies:
+   ```bash
+   pip install -r requirements.txt
+   ```
+3. Configure AWS credentials via environment variables, config files, or IAM roles.
+4. Optional `.env` values:
+   - `AWS_REGION` (defaults to `us-east-1`)
+   - `AWS_PROFILE` (optional profile name)
+   - `LOG_LEVEL` (defaults to `INFO`)
+
+## Running the Server
+
+```bash
+python server.py
+```
+
+## Available Tools
+
+| Tool | Description |
+| --- | --- |
+| `list_instances` | List EC2 instances |
+| `describe_instance` | Describe a specific instance |
+| `start_instance` | Start an instance |
+| `stop_instance` | Stop an instance |
+| `reboot_instance` | Reboot an instance |
+| `terminate_instance` | Terminate an instance |
+| `run_instances` | Launch new instances |
+| `create_image` | Create an AMI from an instance |
+| `create_tags` | Apply tags to EC2 resources |
+
+### Example Usage
+
+Launch an instance:
+
+```json
+{
+  "tool": "run_instances",
+  "arguments": {
+    "image_id": "ami-0abcdef1234567890",
+    "instance_type": "t3.micro",
+    "min_count": 1,
+    "max_count": 1
+  }
+}
+```
+
+Stop an instance:
+
+```json
+{
+  "tool": "stop_instance",
+  "arguments": {
+    "instance_id": "i-0123456789abcdef0",
+    "force": false
+  }
+}
+```
+
+## Authentication
+
+Ensure AWS credentials are configured before invoking tools.

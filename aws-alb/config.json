@@ -1,0 +1,26 @@
+{
+  "name": "aws-alb",
+  "description": "MCP server providing management tools for Amazon Application Load Balancers",
+  "version": "1.0.0",
+  "environment": {
+    "AWS_REGION": "${AWS_REGION:-us-east-1}",
+    "AWS_PROFILE": "${AWS_PROFILE:-}"
+  },
+  "tools": [
+    {"name": "list_load_balancers", "description": "List ALBs"},
+    {"name": "describe_load_balancer", "description": "Describe an ALB"},
+    {"name": "create_load_balancer", "description": "Create an ALB"},
+    {"name": "delete_load_balancer", "description": "Delete an ALB"},
+    {"name": "modify_load_balancer_attributes", "description": "Modify ALB attributes"},
+    {"name": "list_target_groups", "description": "List target groups"},
+    {"name": "create_target_group", "description": "Create a target group"},
+    {"name": "delete_target_group", "description": "Delete a target group"},
+    {"name": "register_targets", "description": "Register targets"},
+    {"name": "deregister_targets", "description": "Deregister targets"},
+    {"name": "list_listeners", "description": "List listeners"},
+    {"name": "create_listener", "description": "Create a listener"},
+    {"name": "delete_listener", "description": "Delete a listener"},
+    {"name": "modify_listener", "description": "Modify a listener"}
+  ],
+  "entrypoint": "python server.py"
+}

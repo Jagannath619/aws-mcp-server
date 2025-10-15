@@ -1,0 +1,21 @@
+{
+  "name": "aws-ec2",
+  "description": "MCP server providing management tools for Amazon EC2",
+  "version": "1.0.0",
+  "environment": {
+    "AWS_REGION": "${AWS_REGION:-us-east-1}",
+    "AWS_PROFILE": "${AWS_PROFILE:-}"
+  },
+  "tools": [
+    {"name": "list_instances", "description": "List EC2 instances"},
+    {"name": "describe_instance", "description": "Describe an EC2 instance"},
+    {"name": "start_instance", "description": "Start an EC2 instance"},
+    {"name": "stop_instance", "description": "Stop an EC2 instance"},
+    {"name": "reboot_instance", "description": "Reboot an EC2 instance"},
+    {"name": "terminate_instance", "description": "Terminate an EC2 instance"},
+    {"name": "run_instances", "description": "Launch EC2 instances"},
+    {"name": "create_image", "description": "Create an AMI"},
+    {"name": "create_tags", "description": "Tag EC2 resources"}
+  ],
+  "entrypoint": "python server.py"
+}
