@@ -1,0 +1,21 @@
+{
+  "name": "aws-vpc",
+  "description": "MCP server providing management tools for Amazon VPC",
+  "version": "1.0.0",
+  "environment": {
+    "AWS_REGION": "${AWS_REGION:-us-east-1}",
+    "AWS_PROFILE": "${AWS_PROFILE:-}"
+  },
+  "tools": [
+    {"name": "list_vpcs", "description": "List all VPCs"},
+    {"name": "describe_vpc", "description": "Describe a VPC"},
+    {"name": "create_vpc", "description": "Create a VPC"},
+    {"name": "delete_vpc", "description": "Delete a VPC"},
+    {"name": "modify_vpc_attribute", "description": "Modify VPC attributes"},
+    {"name": "list_subnets", "description": "List subnets"},
+    {"name": "create_subnet", "description": "Create a subnet"},
+    {"name": "delete_subnet", "description": "Delete a subnet"},
+    {"name": "create_tags", "description": "Tag resources"}
+  ],
+  "entrypoint": "python server.py"
+}

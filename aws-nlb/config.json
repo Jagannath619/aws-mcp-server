@@ -1,0 +1,26 @@
+{
+  "name": "aws-nlb",
+  "description": "MCP server providing management tools for Amazon Network Load Balancers",
+  "version": "1.0.0",
+  "environment": {
+    "AWS_REGION": "${AWS_REGION:-us-east-1}",
+    "AWS_PROFILE": "${AWS_PROFILE:-}"
+  },
+  "tools": [
+    {"name": "list_load_balancers", "description": "List NLBs"},
+    {"name": "describe_load_balancer", "description": "Describe an NLB"},
+    {"name": "create_load_balancer", "description": "Create an NLB"},
+    {"name": "delete_load_balancer", "description": "Delete an NLB"},
+    {"name": "modify_load_balancer_attributes", "description": "Modify NLB attributes"},
+    {"name": "list_target_groups", "description": "List target groups"},
+    {"name": "create_target_group", "description": "Create a target group"},
+    {"name": "delete_target_group", "description": "Delete a target group"},
+    {"name": "register_targets", "description": "Register targets"},
+    {"name": "deregister_targets", "description": "Deregister targets"},
+    {"name": "list_listeners", "description": "List listeners"},
+    {"name": "create_listener", "description": "Create a listener"},
+    {"name": "delete_listener", "description": "Delete a listener"},
+    {"name": "modify_listener", "description": "Modify a listener"}
+  ],
+  "entrypoint": "python server.py"
+}

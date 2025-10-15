@@ -1,0 +1,21 @@
+{
+  "name": "aws-s3",
+  "description": "MCP server providing management tools for Amazon S3",
+  "version": "1.0.0",
+  "environment": {
+    "AWS_REGION": "${AWS_REGION:-us-east-1}",
+    "AWS_PROFILE": "${AWS_PROFILE:-}"
+  },
+  "tools": [
+    {"name": "list_buckets", "description": "List all S3 buckets"},
+    {"name": "create_bucket", "description": "Create an S3 bucket"},
+    {"name": "delete_bucket", "description": "Delete an S3 bucket"},
+    {"name": "list_objects", "description": "List objects in a bucket"},
+    {"name": "upload_object", "description": "Upload an object"},
+    {"name": "download_object", "description": "Download an object"},
+    {"name": "delete_object", "description": "Delete an object"},
+    {"name": "get_bucket_policy", "description": "Retrieve a bucket policy"},
+    {"name": "set_bucket_policy", "description": "Update a bucket policy"}
+  ],
+  "entrypoint": "python server.py"
+}

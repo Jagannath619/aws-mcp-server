@@ -1,0 +1,28 @@
+{
+  "name": "aws-tgw",
+  "description": "MCP server providing management tools for AWS Transit Gateway",
+  "version": "1.0.0",
+  "environment": {
+    "AWS_REGION": "${AWS_REGION:-us-east-1}",
+    "AWS_PROFILE": "${AWS_PROFILE:-}"
+  },
+  "tools": [
+    {"name": "list_transit_gateways", "description": "List Transit Gateways"},
+    {"name": "describe_transit_gateway", "description": "Describe a Transit Gateway"},
+    {"name": "create_transit_gateway", "description": "Create a Transit Gateway"},
+    {"name": "delete_transit_gateway", "description": "Delete a Transit Gateway"},
+    {"name": "modify_transit_gateway", "description": "Modify Transit Gateway options"},
+    {"name": "list_transit_gateway_attachments", "description": "List TGW attachments"},
+    {"name": "create_vpc_attachment", "description": "Create a VPC attachment"},
+    {"name": "delete_vpc_attachment", "description": "Delete a VPC attachment"},
+    {"name": "accept_vpc_attachment", "description": "Accept a shared attachment"},
+    {"name": "list_route_tables", "description": "List Transit Gateway route tables"},
+    {"name": "create_route_table", "description": "Create a route table"},
+    {"name": "delete_route_table", "description": "Delete a route table"},
+    {"name": "associate_route_table", "description": "Associate an attachment"},
+    {"name": "disassociate_route_table", "description": "Disassociate an attachment"},
+    {"name": "create_route", "description": "Create a route"},
+    {"name": "delete_route", "description": "Delete a route"}
+  ],
+  "entrypoint": "python server.py"
+}
