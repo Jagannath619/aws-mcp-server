@@ -21,6 +21,24 @@ This MCP (Model Context Protocol) server exposes a collection of tools for manag
 python server.py
 ```
 
+## Claude Desktop Configuration
+
+Register the server in Claude Desktop by updating your `claude_desktop_config.json`:
+
+```json
+{
+  "mcpServers": {
+    "aws-s3": {
+      "command": "python",
+      "args": ["server.py"],
+      "cwd": "/absolute/path/to/aws-mcp-server/aws-s3"
+    }
+  }
+}
+```
+
+Be sure to replace the `cwd` with the absolute path on your machine and restart Claude Desktop after making the change.
+
 ## Available Tools
 
 | Tool | Description |
