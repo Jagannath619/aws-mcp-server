@@ -60,34 +60,13 @@ Replace the `cwd` value with the absolute path to this server on your machine. R
 
 ### Example Usage
 
-Create a target group:
+**Create a target group**
 
-```json
-{
-  "tool": "create_target_group",
-  "arguments": {
-    "name": "web-targets",
-    "protocol": "HTTP",
-    "port": 80,
-    "vpc_id": "vpc-0123456789abcdef0"
-  }
-}
-```
+- Create a target group named `web-targets` that listens on HTTP port 80 inside VPC `vpc-0123456789abcdef0`.
 
-Register targets:
+**Register targets**
 
-```json
-{
-  "tool": "register_targets",
-  "arguments": {
-    "target_group_arn": "arn:aws:elasticloadbalancing:...:targetgroup/web-targets/123456",
-    "targets": [
-      {"Id": "i-0123456789abcdef0"},
-      {"Id": "i-0fedcba9876543210"}
-    ]
-  }
-}
-```
+- Register instances `i-0123456789abcdef0` and `i-0fedcba9876543210` with target group `arn:aws:elasticloadbalancing:...:targetgroup/web-targets/123456`.
 
 ## Authentication
 

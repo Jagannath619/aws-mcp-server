@@ -55,31 +55,13 @@ Update the `cwd` path to match your local checkout of this repository, then rest
 
 ### Example Usage
 
-Launch an instance:
+**Launch an instance**
 
-```json
-{
-  "tool": "run_instances",
-  "arguments": {
-    "image_id": "ami-0abcdef1234567890",
-    "instance_type": "t3.micro",
-    "min_count": 1,
-    "max_count": 1
-  }
-}
-```
+- Launch one `t3.micro` instance from image `ami-0abcdef1234567890`.
 
-Stop an instance:
+**Stop an instance**
 
-```json
-{
-  "tool": "stop_instance",
-  "arguments": {
-    "instance_id": "i-0123456789abcdef0",
-    "force": false
-  }
-}
-```
+- Stop instance `i-0123456789abcdef0` without using the force flag.
 
 ## Authentication
 

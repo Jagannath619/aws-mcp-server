@@ -55,26 +55,13 @@ Be sure to replace the `cwd` with the absolute path on your machine and restart 
 
 ### Example Usage
 
-List all buckets:
+**List buckets**
 
-```json
-{
-  "tool": "list_buckets"
-}
-```
+- List every S3 bucket in my account.
 
-Upload a file:
+**Upload a file**
 
-```json
-{
-  "tool": "upload_object",
-  "arguments": {
-    "bucket_name": "example-bucket",
-    "object_key": "data/report.csv",
-    "file_path": "./report.csv"
-  }
-}
-```
+- Upload `./report.csv` to bucket `example-bucket` as object `data/report.csv`.
 
 ## Authentication
 

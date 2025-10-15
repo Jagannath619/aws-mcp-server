@@ -60,33 +60,13 @@ Adjust the `cwd` to point to your local repository path and restart Claude Deskt
 
 ### Example Usage
 
-Create an NLB:
+**Create a Network Load Balancer**
 
-```json
-{
-  "tool": "create_load_balancer",
-  "arguments": {
-    "name": "network-lb",
-    "subnets": ["subnet-1", "subnet-2"],
-    "scheme": "internet-facing"
-  }
-}
-```
+- Provision a Network Load Balancer named `network-lb` in subnets `subnet-1` and `subnet-2` with an internet-facing scheme.
 
-Register targets:
+**Register IP targets**
 
-```json
-{
-  "tool": "register_targets",
-  "arguments": {
-    "target_group_arn": "arn:aws:elasticloadbalancing:...:targetgroup/network/abcdef",
-    "targets": [
-      {"Id": "10.0.0.10", "Port": 8080},
-      {"Id": "10.0.0.11", "Port": 8080}
-    ]
-  }
-}
-```
+- Register IP targets `10.0.0.10:8080` and `10.0.0.11:8080` to target group `arn:aws:elasticloadbalancing:...:targetgroup/network/abcdef`.
 
 ## Authentication
 
