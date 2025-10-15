@@ -21,6 +21,24 @@ This MCP server surfaces tooling for Amazon Application Load Balancers (ALB) and
 python server.py
 ```
 
+## Claude Desktop Configuration
+
+Add the server to your `claude_desktop_config.json` to make it available in Claude Desktop:
+
+```json
+{
+  "mcpServers": {
+    "aws-alb": {
+      "command": "python",
+      "args": ["server.py"],
+      "cwd": "/absolute/path/to/aws-mcp-server/aws-alb"
+    }
+  }
+}
+```
+
+Replace the `cwd` value with the absolute path to this server on your machine. Restart Claude Desktop after saving the configuration.
+
 ## Available Tools
 
 | Tool | Description |

@@ -21,6 +21,24 @@ This MCP server exposes tools for managing Amazon Network Load Balancers (NLB) a
 python server.py
 ```
 
+## Claude Desktop Configuration
+
+Expose the server in Claude Desktop by adding it to your `claude_desktop_config.json`:
+
+```json
+{
+  "mcpServers": {
+    "aws-nlb": {
+      "command": "python",
+      "args": ["server.py"],
+      "cwd": "/absolute/path/to/aws-mcp-server/aws-nlb"
+    }
+  }
+}
+```
+
+Adjust the `cwd` to point to your local repository path and restart Claude Desktop after saving the configuration.
+
 ## Available Tools
 
 | Tool | Description |

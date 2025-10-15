@@ -21,6 +21,24 @@ This MCP server provides tooling for Amazon Virtual Private Cloud (VPC) operatio
 python server.py
 ```
 
+## Claude Desktop Configuration
+
+Make the server accessible in Claude Desktop by editing `claude_desktop_config.json`:
+
+```json
+{
+  "mcpServers": {
+    "aws-vpc": {
+      "command": "python",
+      "args": ["server.py"],
+      "cwd": "/absolute/path/to/aws-mcp-server/aws-vpc"
+    }
+  }
+}
+```
+
+Set the `cwd` to the absolute path for this directory on your machine and restart Claude Desktop to load the new configuration.
+
 ## Available Tools
 
 | Tool | Description |

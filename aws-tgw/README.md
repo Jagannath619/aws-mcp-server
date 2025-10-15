@@ -21,6 +21,24 @@ Tools for provisioning and managing AWS Transit Gateways (TGW) and related resou
 python server.py
 ```
 
+## Claude Desktop Configuration
+
+Include the server in Claude Desktop by editing your `claude_desktop_config.json`:
+
+```json
+{
+  "mcpServers": {
+    "aws-tgw": {
+      "command": "python",
+      "args": ["server.py"],
+      "cwd": "/absolute/path/to/aws-mcp-server/aws-tgw"
+    }
+  }
+}
+```
+
+Change the `cwd` to the absolute path for this directory on your system, then restart Claude Desktop to reload the configuration.
+
 ## Available Tools
 
 | Tool | Description |

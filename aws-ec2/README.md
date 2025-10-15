@@ -21,6 +21,24 @@ The AWS EC2 MCP server offers a suite of tools for interacting with Amazon Elast
 python server.py
 ```
 
+## Claude Desktop Configuration
+
+Add the server to your `claude_desktop_config.json` so it can be launched from Claude Desktop:
+
+```json
+{
+  "mcpServers": {
+    "aws-ec2": {
+      "command": "python",
+      "args": ["server.py"],
+      "cwd": "/absolute/path/to/aws-mcp-server/aws-ec2"
+    }
+  }
+}
+```
+
+Update the `cwd` path to match your local checkout of this repository, then restart Claude Desktop to pick up the change.
+
 ## Available Tools
 
 | Tool | Description |
