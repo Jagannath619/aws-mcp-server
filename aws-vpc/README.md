@@ -55,29 +55,13 @@ Set the `cwd` to the absolute path for this directory on your machine and restar
 
 ### Example Usage
 
-Describe a VPC:
+**Describe a VPC**
 
-```json
-{
-  "tool": "describe_vpc",
-  "arguments": {
-    "vpc_id": "vpc-0123456789abcdef0"
-  }
-}
-```
+- Describe VPC `vpc-0123456789abcdef0` and summarize the details.
 
-Create a subnet:
+**Create a subnet**
 
-```json
-{
-  "tool": "create_subnet",
-  "arguments": {
-    "vpc_id": "vpc-0123456789abcdef0",
-    "cidr_block": "10.0.1.0/24",
-    "availability_zone": "us-east-1a"
-  }
-}
-```
+- Create a subnet in VPC `vpc-0123456789abcdef0` using CIDR `10.0.1.0/24` in Availability Zone `us-east-1a`.
 
 ## Authentication
 

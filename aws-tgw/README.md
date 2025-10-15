@@ -62,30 +62,13 @@ Change the `cwd` to the absolute path for this directory on your system, then re
 
 ### Example Usage
 
-Create a Transit Gateway:
+**Create a Transit Gateway**
 
-```json
-{
-  "tool": "create_transit_gateway",
-  "arguments": {
-    "description": "Prod TGW",
-    "auto_accept_shared_attachments": "enable"
-  }
-}
-```
+- Create a transit gateway described as `Prod TGW` with auto-accept enabled for shared attachments.
 
-Create a VPC attachment:
+**Create a VPC attachment**
 
-```json
-{
-  "tool": "create_vpc_attachment",
-  "arguments": {
-    "transit_gateway_id": "tgw-0123456789abcdef0",
-    "vpc_id": "vpc-0123456789abcdef0",
-    "subnet_ids": ["subnet-1", "subnet-2"]
-  }
-}
-```
+- Create a VPC attachment on transit gateway `tgw-0123456789abcdef0` using VPC `vpc-0123456789abcdef0` and subnets `subnet-1` and `subnet-2`.
 
 ## Authentication
 
